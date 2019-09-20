@@ -92,10 +92,11 @@ The rest is up to you!
 
 ### The finished product
 
-- [ ] A single file, `MinCoins
+- [ ] A single file, `MinCoins.java` which builds and runs successfully (use `gradle run --args="1.23"` for our test case in this practical)
 - [ ] Implements variables to track: `quarters`, `dimes`, `nickels`, `pennies`, and `totalCoins` (a measure of how many coins are used)
 - [ ] Uses the `+=` and `-=` operators to modify values `totalCoins` and `totalCents` according to how these values increase or decrease over time
-- [ ] Prints the amount of coins on a single line, preceded by descriptive text
+- [ ] Prints the original value as a `double`
+- [ ] Prints the amount of coins necessary on a single line, preceded by descriptive text
 - [ ] Prints the amount of each denomination of coin on a separate line formatted with tab characters so that all of the numbers line up (**hint**: this uses a _control character_:
 ```
 Value:          1.23
@@ -106,4 +107,5 @@ Nickels:        0
 Pennies:        3
 
 ```
+* **Note:** program output should look like the above.
 - [ ] Removes all `TODO` statement and replaces any other `{}` placeholders.
