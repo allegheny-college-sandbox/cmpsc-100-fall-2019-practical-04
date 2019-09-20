@@ -110,3 +110,46 @@ Pennies:        3
 * **Hint:** This uses a control character
 * **Note:** program output should look like the above.
 - [ ] Removes all `TODO` statement and replaces any other `{}` placeholders.
+
+## GatorGrader
+
+### Docker `container`
+
+If you do not already have the GatorGrader `container`, in a new terminal or Docker Quickstart Terminal, type `docker pull gatoreducator/dockagator` to download the correct `container`.
+
+In the last lab session, we were able to get Docker `container` versions of GatorGrader working! That means that everyone can choose to use the `container` if they'd like. Here are a couple of ways to do it:
+
+#### Running GatorGrader directly on `container` start
+
+* Be sure that you are in the main directory of your practicals repository when running these commands, or you'll certainly experience issues!
+* Remember that if you run `ls -la`, you should see a `.git` folder if you're in the main repository folder.
+* To make sure you're in the right repository, run a `pwd` command.
+    * If you recieve the expected path, you're in the right place. Else, find your way to the right location.
+
+```
+docker run -it --mount type=bind,source="$(pwd)",target="/project" --hostname GatorGrader gatoreducator/dockagator
+```
+
+#### Run `gradle` commands in the container
+
+```
+docker run -it --mount type=bind,source="$(pwd)",target="/project" --hostname GatorGrader gatoreducator/dockagator /bin/bash
+```
+
+- [ ] To `build` your Java work, type `gradle build` at the `command` prompt and press the `Enter` key.
+- [ ] To `grade` your Java work, type `gradle grade` at the `command` prompt and press the `Enter` key.
+
+### Using `gradle` commands directly
+
+- [ ] In a terminal, ensure you're in the main folder of your practical repository and type `gradle build`
+- [ ] After the `command` completes successfully, type `gradle grade`
+
+## `commit` your work
+
+When you've finished your work: remember that there are three (3) steps to submitting a `git` repository: to "pack," to "label," and to "ship."
+
+* Note: attempt all of these from the main directory of the repository.
+
+- [ ] To "pack" the submission: `git add .`
+- [ ] To "label" the submission: `git commit -m "{ADD MESSAGE DESCRIPTING PURPOSE OF COMMIT HERE}"`
+- [ ] To "ship" the submission: `git push`
