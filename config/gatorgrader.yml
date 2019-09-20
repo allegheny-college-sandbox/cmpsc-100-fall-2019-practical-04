@@ -9,8 +9,12 @@ src/main:
             ConfirmFileExists
             MatchFileFragment --fragment "TODO" --count 0 --exact
             MatchFileFragment --fragment "{YOUR NAME HERE}" --count 0 --exact
+            MatchFileFragment --fragment "int quarters" --count 1 exact
+            MatchFileFragment --fragment "int dimes" --count 1 exact
+            MatchFileFragment --fragment "int nickels" --count 1 exact
+            MatchFileFragment --fragment "int pennies" --count exact
             MatchFileFragment --fragment "+=" --count 2
-            MatchFileFragment --fragment "\-=" --count 2
+            MatchFileFragment --fragment "-=" --count 2
             MatchFileFragment --fragment "\t" --count 4
         
 CountCommits --count 2
