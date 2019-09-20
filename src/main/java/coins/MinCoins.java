@@ -44,7 +44,7 @@ public class MinCoins {
     int pennies = totalCents;
     totalCoins += pennies;
     // Print the number of coins in the nice list.
-    System.out.println("Original value:\t" + inputValue/100.0);
+    System.out.println("Original value:\t" + inputValue / 100.0);
     System.out.println("Minimum coins:\t" + totalCoins);
     System.out.println("Quarters:\t" + quarters);
     System.out.println("Dimes:\t\t" + dimes);
