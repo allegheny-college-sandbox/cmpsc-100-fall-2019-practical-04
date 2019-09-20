@@ -2,7 +2,7 @@ package gatorcash;
 
 /** This class gives the gator as few coins as possible.
  *
- * @author {YOUR NAME HERE}
+ * @author Douglas Luman
  */
 public class MinCoins {
   
@@ -28,10 +28,7 @@ public class MinCoins {
      * number of coins required at any given step.
      */
     int totalCoins = 0;
-    /*
-     * TODO Implement count of various coins to determine
-     * the smallest amount necessary to represent the value.
-     */
+    // Calculate the number of coins per type.
     int quarters = totalCents / 25;
     totalCents -= quarters * 25;
     totalCoins += quarters;
@@ -43,13 +40,9 @@ public class MinCoins {
     totalCoins += nickels;
     int pennies = totalCents;
     totalCoins += pennies;
-    /*
-     * TODO Print both the number of coins required and a breakdown
-     * of how many of each coin G Wiz will receive in a "pretty,"
-     * aligned list.
-     */
+    // Print the number of coins in the nice list.
     System.out.println("The minimum number of coins required is: " + totalCoins);
-    System.out.println("Quarters: " + quarters);
+    System.out.println("Quarters:\t" + quarters);
     System.out.println("Dimes:\t\t" + dimes);
     System.out.println("Nickels:\t" + nickels);
     System.out.println("Pennies:\t" + pennies);
