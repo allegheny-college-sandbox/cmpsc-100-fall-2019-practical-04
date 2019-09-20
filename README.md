@@ -1,6 +1,8 @@
 # CMPSC 100-03 Practical Session 4
 
-In this practical session, we address a real problem in the world of gators: minimizing the amount of coins returned as change when a gator buys something. Generally, gators can grasp onto or chomp paper currency, but coins prove a little harder to manage. Let's make it easy on G. Wiz and his friends by helping cashiers give back as few coins as possible.
+In this practical session, we address a real problem in the world of gators: minimizing the amount of coins returned as change when a gator buys something. Generally, gators can grasp onto or chomp paper currency, but coins prove a little harder to manage (hint: because "no thumbs"). Let's make it easy on G. Wiz and his friends by helping cashiers give back as few coins as possible.
+
+(Note: it is strange, but the gator world uses a system of currency _exactly_ like that of the human world.)
 
 Along the way, we're going to explore using a couple more `assignment operators`, in this case, `-=` and `+=`.
 
@@ -21,7 +23,7 @@ Along the way, we're going to explore using a couple more `assignment operators`
 * [Cloning your repository](#cloning-your-repository)
 * [Slack](#slack)
 * [Github](#github)
-* [Minizing the gator's coins: an optimization problem](#minimizing-the-gators-coins--an-optimization-problem)
+* [Minizing the gator's coins: an optimization problem](#minimizing-the-gators-coins-an-optimization-problem)
 
 ## Cloning your repository
 
@@ -41,6 +43,67 @@ An individualized version of this assignment is available on our GitHub Classroo
 
 ## Minimizing the gator's coins: an optimization problem
 
-When we write the word "optimization," what we're up to is somehow maximizing/minimizing one factor such that it either cannot be increased/decreased any more or creates an ideal set of conditions. Here, we're concerned with minimization.
+When we write the word "optimization" here, we're up to somehow maximizing/minimizing one factor such that it either cannot be increased/decreased any more without changing output.
 
-### 
+### The given situation
+
+You've been given starter code that does some of the more difficult things we haven't yet discussed in class. It's safe to say that all of this belongs to the program, and shouldn't be removed.
+
+Of particular note are the following lines:
+
+```java
+    /* 
+     * Accept 1 argument as a double, turn it into an integer;
+     * multiply by 100 to get the value in cents, rather than
+     * dollars. Currency being base 10 is wonderful.
+     */
+    int inputValue;
+    int totalCents;
+    inputValue = totalCents = (int)(Double.parseDouble(args[0]) * 100);
+    /*
+     * Because we only care about the coins, remove the amount
+     * of dollar bills required.
+     */
+    int dollars = totalCents / 100;
+    totalCents -= dollars * 100;
+    /*
+     * "Initialize," or "create" the variable which will hold the
+     * number of coins required at any given step.
+     */
+    int totalCoins = 0;
+```
+
+Here, the program starts by accepting a command-line argument (in `args`) that is of the `double` type. You may be surprised to know that we can change variable types! Here, we're taking in the `double`, but making it an `int` with the `(int)` part of the expression. Multiplying the `double` before converting it to an `int` guarantees we have the most precise integer version of the `double` in cents, rather than a decimal. (The value in cents will always be a whole number, this way.) This is all loaded into `totalCents`.
+
+Next, we only care about the coins, so any amount representing whole dollars doesn't matter here. The below code takes care of that:
+
+```java
+int dollars = totalCents / 100;
+totalCents -= dollars * 100;
+```
+
+This divides the amount of `totalCents` by, essentially, 100 cents (100 cents = 1 dollar) and stores it in the `dollar` variable. Then, the next expression uses the `-=` operator to subtract that value (in cents) from our `totalCents` variable to update the amount of money available for the next step.
+
+But, first, we have to "initialize" (or "define") `totalCoins`, the variable we're going to use to track how many coins are in use. We give it he `int` type because it, too, should be a whole number, and set it to `0`, thereby "initializing" it.
+
+The rest is up to you!
+
+* **Hint:** take a look at how we assign the `dollars` variable. How might you reuse this idea to represent quarters? Dimes? Nickels? Pennies?
+
+### The finished product
+
+- [ ] A single file, `MinCoins
+- [ ] Implements variables to track: `quarters`, `dimes`, `nickels`, `pennies`, and `totalCoins` (a measure of how many coins are used)
+- [ ] Uses the `+=` and `-=` operators to modify values `totalCoins` and `totalCents` according to how these values increase or decrease over time
+- [ ] Prints the amount of coins on a single line, preceded by descriptive text
+- [ ] Prints the amount of each denomination of coin on a separate line formatted with tab characters so that all of the numbers line up (**hint**: this uses a _control character_:
+```
+Value:          1.23
+Minimum Coins:  5
+Quarters:       0
+Dimes:          2
+Nickels:        0
+Pennies:        3
+
+```
+- [ ] Removes all `TODO` statement and replaces any other `{}` placeholders.

@@ -16,7 +16,10 @@ public class MinCoins {
      * multiply by 100 to get the value in cents, rather than
      * dollars. Currency being base 10 is wonderful.
      */
-    int totalCents = (int)(Double.parseDouble(args[0]) * 100);
+    int inputValue;
+    int totalCents;
+    inputValue = totalCents = (int)(Double.parseDouble(args[0]) * 100);
+    /*
     /*
      * Because we only care about the coins, remove the amount
      * of dollar bills required.
@@ -41,7 +44,8 @@ public class MinCoins {
     int pennies = totalCents;
     totalCoins += pennies;
     // Print the number of coins in the nice list.
-    System.out.println("The minimum number of coins required is: " + totalCoins);
+    System.out.println("Original value:\t" + inputValue/100.0);
+    System.out.println("Minimum coins:\t" + totalCoins);
     System.out.println("Quarters:\t" + quarters);
     System.out.println("Dimes:\t\t" + dimes);
     System.out.println("Nickels:\t" + nickels);
