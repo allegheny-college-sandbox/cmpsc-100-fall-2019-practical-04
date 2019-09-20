@@ -97,7 +97,7 @@ The rest is up to you!
 - [ ] Uses the `+=` and `-=` operators to modify values `totalCoins` and `totalCents` according to how these values increase or decrease over time
 - [ ] Prints the original value as a `double`
 - [ ] Prints the amount of coins necessary on a single line, preceded by descriptive text
-- [ ] Prints the amount of each denomination of coin on a separate line formatted with tab characters so that all of the numbers line up (**hint**: this uses a _control character_:
+- [ ] Prints the amount of each denomination of coin on a separate line formatted with tab characters so that all of the numbers line up:
 ```
 Value:          1.23
 Minimum Coins:  5
@@ -107,5 +107,6 @@ Nickels:        0
 Pennies:        3
 
 ```
+* **Hint:** This uses a control character
 * **Note:** program output should look like the above.
 - [ ] Removes all `TODO` statement and replaces any other `{}` placeholders.
