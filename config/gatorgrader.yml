@@ -5,13 +5,13 @@ indent: 4
 ---
 src/main:
     java:
-        coins/MinCount.java:
+        coins/MinCoins.java:
             ConfirmFileExists
             MatchFileFragment --fragment "TODO" --count 0 --exact
             MatchFileFragment --fragment "{YOUR NAME HERE}" --count 0 --exact
             MatchFileRegex --regex "+=" --count 2
             MatchFileRegex --regex "-=" --count 2
-            MatchFileRegex --regex "\t" --count 1
+            MatchFileRegex --regex "\\t" --count 1
         
 CountCommits --count 2
 ExecuteCommand --command "gradle build"
