@@ -9,10 +9,10 @@ src/main:
             ConfirmFileExists
             MatchFileFragment --fragment "TODO" --count 0 --exact
             MatchFileFragment --fragment "{YOUR NAME HERE}" --count 0 --exact
-            MatchFileRegex --regex "+=" --count 2
-            MatchFileRegex --regex "-=" --count 2
-            MatchFileRegex --regex "\\t" --count 1
+            MatchFileFragment --fragment "+=" --count 2
+            MatchFileFragment --fragment "-=" --count 2
+            MatchFileFragment --fragment "\t" --count 4
         
 CountCommits --count 2
 ExecuteCommand --command "gradle build"
-ExecuteCommand --command "gradle run --args='1.23'"
+MatchCommandRegex --command "gradle run --args='1.23'" --regex "5" --count 1
