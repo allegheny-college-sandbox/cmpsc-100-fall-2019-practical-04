@@ -10,7 +10,7 @@ src/main:
             MatchFileFragment --fragment "TODO" --count 0 --exact
             MatchFileFragment --fragment "{YOUR NAME HERE}" --count 0 --exact
             MatchFileFragment --fragment "+=" --count 2
-            MatchFileFragment --fragment "-=" --count 2
+            MatchFileFragment --fragment "\-=" --count 2
             MatchFileFragment --fragment "\t" --count 4
         
 CountCommits --count 2
