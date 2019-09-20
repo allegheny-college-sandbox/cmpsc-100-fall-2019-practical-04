@@ -14,8 +14,8 @@ src/main:
             MatchFileFragment --fragment "int nickels" --count 1 --exact
             MatchFileFragment --fragment "int pennies" --count 1 --exact
             MatchFileFragment --fragment "+=" --count 2
-            MatchFileFragment --fragment "\"-=\"" --count 2
             MatchFileFragment --fragment "\t" --count 4
+            MatchFileRegex --regex "\-=" --count 2
         
 CountCommits --count 2
 ExecuteCommand --command "gradle build"

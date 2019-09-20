@@ -21,6 +21,7 @@ Along the way, we're going to explore using a couple more `assignment operators`
 * [Cloning your repository](#cloning-your-repository)
 * [Slack](#slack)
 * [Github](#github)
+* [Minizing the gator's coins: an optimization problem](#minimizing-the-gators-coins--an-optimization-problem)
 
 ## Cloning your repository
 
@@ -40,6 +41,6 @@ An individualized version of this assignment is available on our GitHub Classroo
 
 ## Minimizing the gator's coins: an optimization problem
 
-When we write the word "optimization," what we're up to is somehow minimizing one factor such that it either cannot be reduced any more or creates an ideal set of conditions. Here, we're concerned with minimization.
+When we write the word "optimization," what we're up to is somehow maximizing/minimizing one factor such that it either cannot be increased/decreased any more or creates an ideal set of conditions. Here, we're concerned with minimization.
 
 ### 
