@@ -23,7 +23,9 @@ Along the way, we're going to explore using a couple more `assignment operators`
 * [Cloning your repository](#cloning-your-repository)
 * [Slack](#slack)
 * [Github](#github)
-* [Minizing the gator's coins: an optimization problem](#minimizing-the-gators-coins-an-optimization-problem)
+* [Minimizing the gator's coins: an optimization problem](#minimizing-the-gators-coins-an-optimization-problem)
+* [GatorGrader](#gatorgrader)
+* [`commit` your work](#commit-your-work)
 
 ## Cloning your repository
 
